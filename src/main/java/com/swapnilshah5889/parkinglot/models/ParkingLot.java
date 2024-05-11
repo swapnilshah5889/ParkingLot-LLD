@@ -1,5 +1,7 @@
 package com.swapnilshah5889.parkinglot.models;
 
+import com.swapnilshah5889.parkinglot.models.constants.ParkingLotStatus;
+
 import java.util.List;
 
 public class ParkingLot {

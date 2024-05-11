@@ -1,4 +1,4 @@
-package com.swapnilshah5889.parkinglot.models;
+package com.swapnilshah5889.parkinglot.models.constants;
 
 public enum ParkingSpotStatus {
     AVAILABLE,
