@@ -5,8 +5,7 @@ import com.swapnilshah5889.parkinglot.models.constants.VehicleType;
 
 import java.util.List;
 
-public class ParkingSpot {
-    private Long id;
+public class ParkingSpot extends BaseModel {
     private ParkingSpotStatus parkingSpotStatus;
     private List<VehicleType> supportedVehicleTypes;
     private int number;

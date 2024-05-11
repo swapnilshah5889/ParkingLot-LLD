@@ -4,8 +4,7 @@ import com.swapnilshah5889.parkinglot.models.constants.ParkingSpotStatus;
 
 import java.util.List;
 
-public class ParkingFloor {
-    private Long id;
+public class ParkingFloor extends BaseModel {
     private int number;
     private List<ParkingSpot> parkingSpots;
     private ParkingSpotStatus parkingSpotStatus;
