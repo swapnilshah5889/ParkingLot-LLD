@@ -1,5 +1,6 @@
 package com.swapnilshah5889.parkinglot.service;
 
+import com.swapnilshah5889.parkinglot.exceptions.NoParkingSpotAvailableException;
 import com.swapnilshah5889.parkinglot.models.Gate;
 import com.swapnilshah5889.parkinglot.models.ParkingSpot;
 import com.swapnilshah5889.parkinglot.models.Ticket;
@@ -25,7 +26,8 @@ public class TicketService {
         this.ticketRepository = ticketRepository;
     }
 
-    public Ticket generateTicket(String vehicleNumber, VehicleType vehicleType, Long gateId) {
+    public Ticket generateTicket(String vehicleNumber, VehicleType vehicleType,
+                                 Long gateId) throws NoParkingSpotAvailableException {
 
         // Fetch vehicle object using vehicle number
         Vehicle vehicle = vehicleService.getVehicle(vehicleNumber);
@@ -47,6 +49,10 @@ public class TicketService {
 
         // Assign parking spot
         ParkingSpot spot = spotAssignmentStrategy.assignSpot(vehicleType, gate);
+
+        if(spot == null) {
+            throw new NoParkingSpotAvailableException("No parking spot available");
+        }
         ticket.setParkingSpot(spot);
 
         Ticket savedTicket = ticketRepository.saveTicket(ticket);
