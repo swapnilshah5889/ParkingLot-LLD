@@ -11,7 +11,7 @@ public class ParkingLotRepository {
     private Map<Long, ParkingLot> parkingLotMap;
     private Long parkingLotSequence;
 
-    ParkingLotRepository() {
+    public ParkingLotRepository() {
         parkingLotSequence = 0l;
         parkingLotMap = new HashMap<>();
     }

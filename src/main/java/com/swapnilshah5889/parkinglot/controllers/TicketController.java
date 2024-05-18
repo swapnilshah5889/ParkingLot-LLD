@@ -10,7 +10,7 @@ import com.swapnilshah5889.parkinglot.service.TicketService;
 
 public class TicketController {
     TicketService ticketService;
-    TicketController(TicketService ticketService) {
+    public TicketController(TicketService ticketService) {
         this.ticketService = ticketService;
     }
 

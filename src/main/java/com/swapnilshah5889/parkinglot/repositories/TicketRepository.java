@@ -9,7 +9,7 @@ public class TicketRepository {
 
     private Map<Long, Ticket> ticketMap;
     private Long ticketSequence;
-    TicketRepository() {
+    public TicketRepository() {
         ticketMap = new HashMap<>();
         ticketSequence = 0l;
     }
