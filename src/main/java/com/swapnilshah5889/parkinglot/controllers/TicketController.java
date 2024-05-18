@@ -7,7 +7,7 @@ import com.swapnilshah5889.parkinglot.models.Vehicle;
 
 public class TicketController {
 
-    public GenerateTicketResponse generateTicket(GenerateTicketRequest) {
+    public GenerateTicketResponse generateTicket(GenerateTicketRequest generateTicketRequest) {
 
         return null;
     }
